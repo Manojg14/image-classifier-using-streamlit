@@ -9,6 +9,7 @@ st.set_page_config(page_title="Image Classifier",
 st.title("Image Classifier")
 st.write("Upload an image and the model will predict its class.")
 
+
 uploaded_file = st.file_uploader(
     "Choose an image...",
     type=["jpg", "jpeg", "png"]
@@ -18,16 +19,14 @@ uploaded_file = st.file_uploader(
 def load_classifier():
     return pipeline(
         task = "image-classification",
-        model = "domai-tb/OpenPlants-Identification-ViT-Base-Patch16-224"
+        model = "google/vit-base-patch16-224"
         )
-
-# model = "google/vit-base-patch16-224"
 
 classifier = load_classifier()
 
 if uploaded_file is not None:
     try:
-        image = Image.open(uploaded_file)
+        image = Image.open(uploaded_file).convert("RGB")
 
         st.image(
             image,
