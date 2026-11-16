@@ -51,5 +51,6 @@ if uploaded_file is not None:
     except Exception as error:
         st.error(f"This image cannot be processed. Please upload a valid image file.")
         st.exception(error)
-
+else:
+    st.info("Please upload an image to classify.")
 
