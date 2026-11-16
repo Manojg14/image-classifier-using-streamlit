@@ -86,7 +86,3 @@ pillow
 - Scientific name and species identification.
 - Biological information integration.
 - Streamlit Cloud deployment.
-
-⭐ If you find this project useful, give it a star!
-
-**Built with Python, Hugging Face & Streamlit.**
