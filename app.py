@@ -35,5 +35,18 @@ if uploaded_file is not None:
             use_container_width=True
         )
 
+        with st.spinner("Analyzing the image..."):
+            predictions = classifier(image, top_k=3)
+
+        st.subheader("Predictions:")
+
+        for prediction in predictions:
+            label = prediction["label"]
+            confidence = prediction["score"] * 100
+
+            st.write(f"**{label}**")
+            st.progress(float(prediction["score"]))
+            st.write(f"Confidence: {confidence:.2f}%")
+            
 
 
