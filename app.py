@@ -37,7 +37,7 @@ if uploaded_file is not None:
         with st.spinner("Analyzing the image..."):
             predictions = classifier(image, top_k=3)
 
-        st.subheader("Predictions:")
+        st.subheader("Predictions:") 
 
         for prediction in predictions:
             label = prediction["label"]
