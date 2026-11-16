@@ -1,4 +1,4 @@
-# 🖼️ Image Classifier using Hugging Face & Streamlit
+7# 🖼️ Image Classifier using Hugging Face & Streamlit
 
 An AI-powered image classification application built using **Python, Streamlit, Hugging Face Transformers, and Vision Transformer (ViT)**.
 
