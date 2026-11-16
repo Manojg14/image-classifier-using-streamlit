@@ -1,4 +1,6 @@
 import streamlit as st
+from PIL import Image 
+from transformers import pipeline
 
 st.set_page_config(page_title="Image Classifier", 
                    page_icon=":camera:", 
@@ -11,4 +13,3 @@ uploaded_file = st.file_uploader(
     "Choose an image...",
     type=["jpg", "jpeg", "png"]
 )
-
