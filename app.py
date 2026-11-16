@@ -48,5 +48,8 @@ if uploaded_file is not None:
             st.progress(float(prediction["score"]))
             st.write(f"Confidence: {confidence:.2f}%")
             
+    except Exception as error:
+        st.error(f"This image cannot be processed. Please upload a valid image file.")
+        st.exception(error)
 
 
